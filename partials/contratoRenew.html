@@ -1,0 +1,36 @@
+    <button type="button" class="close" ng-click="cancel();">
+        <i class="fa fa-times-circle-o" style="margin:10px;color:blue;"></i>
+    </button>
+    <div class="modal-header">
+        <h3 class="modal-title">Renovar Póliza #<b> {{contrato.num}}</b></h3>
+    </div>
+    <div class="modal-body">
+        <form name="contrato_form" class="form-horizontal" role="form" novalidate>
+            <form-element label="Nueva Fecha de Vencimiento" mod="contrato" ng-class="{ 'has-error' : contrato_form.finVig.$invalid }">
+                <input type="date" class="form-control" name="finVig" placeholder="Fecha de Vencimiento" ng-model="contrato.finVig" min="2015-12-12" focus required/>
+            </form-element>
+            <form-element label="Modalidad" mod="contrato">
+               <input type="radio" ng-model="contrato.modalidad" name="modalidad" value="Mensual"> Mensual</label><br>
+               <input type="radio" ng-model="contrato.modalidad" name="modalidad" value="Bimestral"> Bimestral</label><br>
+               <input type="radio" ng-model="contrato.modalidad" name="modalidad" value="Trimestral"> Trimestral</label><br>
+               <input type="radio" ng-model="contrato.modalidad" name="modalidad" value="Semestral"> Semestral</label><br>
+               <input type="radio" ng-model="contrato.modalidad" name="modalidad" checked="checked" value="Anual"> Anual</label>
+            </form-element>
+
+            <div class="space"></div>
+            <div class="space-4"></div>
+            <div class="modal-footer">
+                <form-element label="">
+                    <div class="text-right">
+                        <a class="btn btn-sm" ng-click="cancel()"><i class="ace-icon fa fa-reply"></i>Cancel</a>
+                        <button ng-click="savecontrato(contrato);"
+                                ng-disabled="contrato_form.$invalid"
+                                class="btn btn-sm btn-primary"
+                                type="submit">
+                            <i class="ace-icon fa fa-check"></i>Renovar Póliza
+                        </button>
+                    </div>
+                </form-element>
+            </div>
+        </form>
+    </div>

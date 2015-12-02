@@ -1,0 +1,37 @@
+
+<title>Consulta de Contratos - Bases de datos PJA</title>
+<h4 class="blog-post-title">Consulta de Contratos</h4>
+<hr/>
+<button type="button" class="btn btn-danger fa fa-plus" ng-click="open(contrato);">&nbsp;Agregar un nuevo Contrato</button>
+
+<div class="table-responsive">
+<div class="panel panel-primary">
+  <div class="panel-heading">Lista de Contratos
+      <div class="sw-search" >
+            <div class="nav-search" id="nav-search">
+                    Escriba una palabra para <b>filtrar</b>: <span class="input-icon">
+                        <input placeholder="Filtrar contratos de la lista ..." class="nav-search-input" ng-model="filtercontrato" ng-change="resetLimit();"  autocomplete="off" type="text" style="width:300px;" focus>
+                        <i class="search-icon fa fa-search nav-search-icon"></i>
+                    </span>
+            </div>
+        </div>
+    </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+    <tr ng-show="contratos.length==0"><td style="vertical-align:middle;"><i class="fa fa-ban fa-3x"></i>&nbsp;No datos encontrados, problema con la base de datos</td></tr>
+    <tr ng-hide="contratos.length>-1"><td style="vertical-align:middle;"><i class="fa fa-cog fa-3x fa-spin"></i>&nbsp;Cargando volumen de datos</td></tr>
+
+    <tr><th ng-repeat="c in columns">{{c.text}}</th></tr>
+
+    <tr ng-repeat="c in contratos | filter:filtercontrato | orderBy:'id'" id="{{c.NumContratos}}" ng-click="contratosbyID(c);">
+        <td><center>{{c.NumContratos}}</center></td><td>{{c.idContratante}}</td><td>{{c.nombres + ' ' + c.apellidos}}</td><td>{{c.telefono}}</td><td>{{c.celular}}</td><td>{{c.email}}</td><td>{{c.direccion}}</td>
+        <td style="width:150px">
+            <div class="btn-group">
+              <button alt="Renovar" type="button" class="btn btn-default fa fa-edit" ng-click="open(c);"></button>
+            </div>
+        </td>
+    </tr>
+    </table>
+</div>
+</div>
+</div>

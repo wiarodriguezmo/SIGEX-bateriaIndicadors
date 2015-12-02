@@ -1,0 +1,289 @@
+<title>Inicio sistema de información PJA</title>
+
+<hr/>
+
+<div class="table-responsive">
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Indicador</th>
+      <th>Tipo de información</th>
+      <th>Semáforo</th>
+    </tr>
+  </thead>
+  <tr>
+    <td>1</td>
+    <td>N° de proyectos de extensión con agentes externos a la Universidad en el último año.</td>
+    <td>Información secundaria</td>
+    <td class="{{indicadoresS.uno}}">{{ secundaria.uno}}</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>% de proyectos de extensión con sector social en el último año.</td>
+    <td>Información secundaria</td>
+    <td class="{{indicadoresS.dos}}">{{ secundaria.dos * 100}}%</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>% de proyectos de extensión con sector privado en el último año.</td>
+    <td>Información secundaria</td>
+    <td class="{{indicadoresS.tres}}">{{ secundaria.tres * 100}}%</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>% de proyectos de extensión con el Estado en el último año.</td>
+    <td>Información secundaria</td>
+    <td class="{{indicadoresS.cuatro}}">{{ secundaria.cuatro * 100}}%</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>% de proyectos de extensión con percepción de satisfacción de los usuarios sobre sus aportes al sector social.</td>
+    <td>Encuesta a Usuarios y Beneficiarios</td>
+    <td class="{{indicadores.cinco.clasificacion}}">{{indicadores.cinco.valor * 100 | number:2}}%</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>% de proyectos de extensión con percepción de satisfacción de los usuarios sobre sus aportes al sector privado.</td>
+    <td>Encuesta a Usuarios y Beneficiarios</td>
+    <td class="{{indicadores.seis.clasificacion}}">{{indicadores.seis.valor * 100 | number:2}}%</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>% de proyectos de extensión con percepción de satisfacción de los usuarios sobre sus aportes al sector estatal.</td>
+    <td>Encuesta a Usuarios y Beneficiarios</td>
+    <td class="{{indicadores.siete.clasificacion}}">{{indicadores.siete.valor * 100 | number:2}}%</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>% proyectos de extensión de la Universidad relacionados con propósitos previstos por la Universidad en general.</td>
+    <td>Encuesta sistematización</td>
+    <td class="{{indicadores.ocho.clasificacion}}">{{indicadores.ocho.valor * 100 | number:2}}%</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>% proyectos extensión de la Universidad relacionados explícitamente con el plan estratégico de extensión de la Unidad o Facultad.</td>
+    <td>Encuesta sistematización</td>
+    <td class="{{indicadores.nueve.clasificacion}}">{{indicadores.nueve.valor * 100 | number:2}}%</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>Publicaciones por proyecto con ISBN e ICCN aceptados por pares académicos.</td>
+    <td>Información secundaria</td>
+    <td class="{{indicadoresS.diez}}">{{ secundaria.diez}}</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>% de participantes con percepción de satisfacción sobre los aportes de la extensión a la docencia.</td>
+    <td>Encuesta a Integrantes del grupo de trabajo</td>
+    <td class="{{indicadores.once.clasificacion}}">{{indicadores.once.valor * 100 | number:2}}%</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>% de participantes con percepción de satisfacción sobre el aporte de la extensión a la investigación.</td>
+    <td>Encuesta a Integrantes del grupo de trabajo</td>
+    <td class="{{indicadores.doce.clasificacion}}">{{indicadores.doce.valor * 100 | number:2}}%</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>% de participantes que consideran que los proyectos de extensión son emprendidos bajo los intereses y principios de la UN.</td>
+    <td>Encuesta a Integrantes del grupo de trabajo</td>
+    <td class="{{indicadores.trece.clasificacion}}">{{indicadores.trece.valor * 100 | number:2}}%</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>% proyectos de extensión con agentes externos a la Universidad relacionados con propósitos y metas previstas en el Plan Nacional de Desarrollo, Planes departamentales o planes locales de desarrollo según sea el caso.</td>
+    <td>Encuesta sistematización</td>
+    <td class="{{indicadores.catorce.clasificacion}}">{{indicadores.catorce.valor * 100 | number:2}}%</td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>% de estudiantes de pregrado, estudiantes de postgrado, egresados, docentes y pensionados que participaron en los programas de extensión en el año anterior.</td>
+    <td>Información secundaria</td>
+    <td class="{{indicadoresS.quince}}">{{ secundaria.quince * 100}}%</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>% proyectos de extensión que señalan específicamente los aportes al conocimiento como producto de su ejecución.</td>
+    <td>Encuesta sistematización</td>
+      <td class="{{indicadores.dieciseis.clasificacion}}">{{indicadores.dieciseis.valor * 100 | number:2}}%</td>
+  </tr>
+  <tr>
+    <td>17</td>
+    <td>% proyectos de extensión que señalan específicamente los aportes del proyecto al plan de estudios, a temas desarrollados en clase, a las metodologías de enseñanza, a estudios de caso utilizados en la enseñanza, entre otros.</td>
+    <td>Encuesta sistematización</td>
+    <td class="{{indicadores.diecisiete.clasificacion}}">{{indicadores.diecisiete.valor * 100 | number:2}}%</td>
+  </tr>
+  <tr>
+    <td>18</td>
+    <td>N° de disciplinas involucradas en el desarrollo del total de los convenios o consultorías.</td>
+    <td>Información secundaria</td>
+    <td class="{{indicadoresS.dieciocho}}">{{ secundaria.dieciocho}}</td>
+  </tr>
+  <tr>
+    <td>19</td>
+    <td>% de proyectos de extensión que señalan específicamente los aportes del proyecto en términos de innovación (tecnológica, metodológica, instrumental, social, pedagógica, entre otras) y su manera de incorporación a líneas de investigación o al desarrollo académico de la Universidad.</td>
+    <td>Encuesta sistematización</td>
+    <td class="{{indicadores.diecinueve.clasificacion}}">{{indicadores.diecinueve.valor * 100 | number:2}}%</td>
+  </tr>
+  <tr>
+    <td>20</td>
+    <td>% de proyectos de extensión que identifican con claridad la situación de partida (línea de base) de Derechos Humanos que deben ser garantizados o reparados a partir de la contribución del proyecto.</td>
+    <td>Encuesta sistematización</td>
+    <td class="{{indicadores.veinte.clasificacion}}">{{indicadores.veinte.valor * 100 | number:2}}%</td>
+  </tr>
+  <tr>
+    <td>21</td>
+    <td>% de proyectos de extensión que aplican un instrumento para establecer la percepción de los usuarios sobre los aportes del proyecto a la sociedad.</td>
+    <td>Encuesta sistematización</td>
+    <td class="{{indicadores.veintiuno.clasificacion}}">{{indicadores.veintiuno.valor * 100 | number:2}}%</td>
+  </tr>
+  <tr>
+    <td>22</td>
+    <td>% de proyectos de extensión que señalan específicamente las contribuciones a las políticas públicas como producto de su ejecución.</td>
+    <td>Encuesta sistematización</td>
+    <td class="{{indicadores.veintidos.clasificacion}}">{{indicadores.veintidos.valor * 100 | number:2}}%</td>
+  </tr>
+  <tr>
+    <td>23</td>
+    <td>% de proyectos de extensión qe señalan específicamente las contribuciones del proyecto a la promoción, garantía o restitución de derechos humanos.</td>
+    <td>Encuesta sistematización</td>
+    <td class="{{indicadores.veintitres.clasificacion}}">{{indicadores.veintitres.valor * 100 | number:2}}%</td>
+  </tr>
+  <tr>
+    <td>24</td>
+    <td>% de proyectos de extensión que señalan específicamente las contribuciones a las decisiones corporativas o de la Universidad Nacional como producto de su ejecución..</td>
+    <td>Encuesta sistematización</td>
+    <td class="{{indicadores.veinticuatro.clasificacion}}">{{indicadores.veinticuatro.valor * 100 | number:2}}%</td>
+  </tr>
+  <tr>
+    <td>25</td>
+    <td>% de proyectos de extensión que establecen el nivel de satisfacción de los usuarios sobre los aportes del proyecto a la sociedad.</td>
+    <td>Encuesta a Usuarios y Beneficiarios</td>
+    <td class="{{indicadores.veinticinco.clasificacion}}">{{indicadores.veinticinco.valor * 100 | number:2}}%</td>
+  </tr>
+  <tr>
+    <td>26</td>
+    <td>% de personas que se benefician directamente por los convenios o consultorías realizadas.</td>
+    <td>Información secundaria</td>
+    <td class="{{indicadoresS.veintiseis}}">{{ secundaria.veintiseis * 100}}%</td>
+  </tr>
+  <tr>
+    <td>27</td>
+    <td>% de usuarios que aceptan haber utilizado conocimientos o prácticas trabajados durante los proyectos de extensión.</td>
+    <td>Encuesta a Usuarios y Beneficiarios</td>
+    <td class="{{indicadores.veintisiete.clasificacion}}">{{indicadores.veintisiete.valor * 100 | number:2}}%</td>
+  </tr>
+  <tr>
+    <td>28</td>
+    <td>N° de sesiones de seguimiento de la extensión realizadas en el año en la Unidad o facultad.</td>
+    <td>Información secundaria</td>
+    <td class="{{indicadoresS.veintiocho}}">{{ secundaria.veintiocho}}</td>
+  </tr>
+  <tr>
+    <td>29</td>
+    <td>% de decisiones tomadas en los comités de seguimiento y en los informes de evaluación que en efecto fueron aplicadas.</td>
+    <td>Información secundaria</td>
+    <td class="{{indicadoresS.veintinueve}}">{{ secundaria.veintinueve * 100}}%</td>
+  </tr>
+  <tr>
+    <td>30</td>
+    <td>N° de documentos de evaluación de la misión de extensión (que cumplen los criterios establecidos) que se producen al año en cada unidad o facultad.</td>
+    <td>Información secundaria</td>
+    <td class="{{indicadoresS.treinta}}">{{ secundaria.treinta}}</td>
+  </tr>
+  <tr>
+    <td>31</td>
+    <td>% de usuarios con percepción de satisfacción por el servicio recibido de la Universidad.</td>
+    <td>Encuesta a Usuarios y Beneficiarios</td>
+    <td class="{{indicadores.treintayuno.clasificacion}}">{{indicadores.treintayuno.valor * 100 | number:2}}%</td>
+  </tr>
+  <tr>
+    <td>32</td>
+    <td>% de usuarios con percepción de confianza en la Universidad Nacional.</td>
+    <td>Encuesta a Usuarios y Beneficiarios</td>
+    <td class="{{indicadores.treintaydos.clasificacion}}">{{indicadores.treintaydos.valor * 100 | number:2}}%</td>
+  </tr>
+  <tr>
+    <td>33</td>
+    <td>% de participantes en los proyectos de extensión que califican satisfactoriamente la agilidad de trámites.</td>
+    <td>Encuesta a Integrantes del grupo de trabajo</td>
+    <td class="{{indicadores.treintaytres.clasificacion}}">{{indicadores.treintaytres.valor * 100 | number:2}}%</td>
+  </tr>
+  <tr>
+    <td>34</td>
+    <td>% de participantes en los proyectos de extensión con percepción de satisfacción sobre la transparencia de trámites.</td>
+    <td>Encuesta a Usuarios, Beneficiarios e Integrantes del grupo de trabajo</td>
+    <td class="{{indicadores.treintaycuatro.clasificacion}}">{{indicadores.treintaycuatro.valor * 100 | number:2}}%</td>
+  </tr>
+  <tr>
+    <td>35</td>
+    <td>Monto de recursos brutos que ingresa a la unidad o facultad como producto de las actividades de extensión en el último año.</td>
+    <td>Información secundaria</td>
+    <td class="{{indicadoresS.treintaycinco}}">{{ secundaria.treintaycinco/1000000 | number: 0}}M</td>
+  </tr>
+  <tr>
+    <td>36</td>
+    <td>% de recursos transferidos del nivel central para financiar las actividades de extensión.</td>
+    <td>Información secundaria</td>
+    <td class="{{indicadoresS.treintayseis}}">{{ secundaria.treintayseis * 100}}%</td>
+  </tr>
+  <tr>
+    <td>37</td>
+    <td>% de recursos económicos que genera la venta de servicios de extensión (después de gastos operativos de los convenios o consultoría) que son reinvertidos en actividades de investigación, docencia o en recursos y medios académicos de facultades y departamentos orientados hacia sus estudiantes.</td>
+    <td>Información secundaria</td>
+    <td class="{{indicadoresS.treintaysiete}}">{{ secundaria.treintaysiete * 100}}%</td>
+  </tr>
+  <tr>
+    <td>38</td>
+    <td>% de participantes en los proyectos de extensión con percepción de satisfacción sobre sobre la estructura administrativa de la extensión.</td>
+    <td>Encuesta a Integrantes del grupo de trabajo</td>
+    <td class="{{indicadores.treintayocho.clasificacion}}">{{indicadores.treintayocho.valor * 100 | number:2}}%</td>
+  </tr>
+  <tr>
+    <td>39</td>
+    <td>% de participantes en los proyectos de extensión con percepción de satisfacción sobre la eficiencia administrativa de la extensión.</td>
+    <td>Encuesta a Integrantes del grupo de trabajo</td>
+    <td class="{{indicadores.treintaynueve.clasificacion}}">{{indicadores.treintaynueve.valor * 100 | number:2}}%</td>
+  </tr>
+  <tr>
+    <td>40</td>
+    <td>% de participantes en los proyectos de extensión con percepción de satisfacción sobre los procesos colaborativos y de trabajo en equipo.</td>
+    <td>Encuesta a Integrantes del grupo de trabajo</td>
+    <td class="{{indicadores.cuarenta.clasificacion}}">{{indicadores.cuarenta.valor * 100 | number:2}}%</td>
+  </tr>
+  <tr>
+    <td>41</td>
+    <td>% de participantes en los proyectos de extensión con percepción de satisfacción sobre el apoyo de la dirección nacional a la labor de Extensión.</td>
+    <td>Encuesta a Integrantes del grupo de trabajo</td>
+    <td class="{{indicadores.cuarentayuno.clasificacion}}">{{indicadores.cuarentayuno.valor * 100 | number:2}}%</td>
+  </tr>
+  <tr>
+    <td>42</td>
+    <td>% de participantes en los proyec- tos de extensión con percepción de satisfacción sobre el apoyo de la sede regional a la labor de Extensión.</td>
+    <td>Encuesta a Integrantes del grupo de trabajo</td>
+    <td class="{{indicadores.cuarentaydos.clasificacion}}">{{indicadores.cuarentaydos.valor * 100 | number:2}}%</td>
+  </tr>
+  <tr>
+    <td>43</td>
+    <td>% de propuestas ejecutadas con respecto a las presentadas.</td>
+    <td>Información secundaria</td>
+    <td class="{{indicadoresS.cuarentaytres}}">{{ secundaria.cuarentaytres * 100}}%</td>
+  </tr>
+  <tr>
+    <td>44</td>
+    <td>% de docentes y estudiantes que consideran que los proyectos de ex- tensión son liderados por las unidades y facultades con mayor conocimiento y preparación de acuerdo a los temas que se tratan.</td>
+    <td>Encuesta a Integrantes del grupo de trabajo</td>
+    <td class="{{indicadores.cuarentaycuatro.clasificacion}}">{{indicadores.cuarentaycuatro.valor * 100 | number:2}}%</td>
+  </tr>
+  <tr>
+    <td>45</td>
+    <td>% de docentes que consideran que existen las habilidades y com- petencias en los docentes y faculta- des asignadas para adelantar cada proyecto de la Universidad.</td>
+    <td>Encuesta a Integrantes del grupo de trabajo</td>
+    <td class="{{indicadores.cuarentaycinco.clasificacion}}">{{indicadores.cuarentaycinco.valor * 100 | number:2}}%</td>
+  </tr>
+
+
+
+</table>
+</div>

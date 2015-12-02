@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="img/favicon.ico">
+</head>
+<body ng-cloak="">
+
+  <link rel="stylesheet" href="css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Generador de Indicadores OBEX</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="{{ clientes }} dropdown">
+            <a data-toggle="dropdown" role="button" aria-expanded="false">Indicadores<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li class="{{ clientes1 }}"><a href="#/inscribirSec">Inscribir información secundaria</a></li>
+              <li class="{{ clientes3 }}"><a href="#/indicadores">Generar batería de indicadores</a></li>
+              <li class="divider"></li>
+              <li class="dropdown-header">Extra...</li>
+            </ul>
+          </li>
+          <li class="{{ polizas }} dropdown">
+            <a data-toggle="dropdown" role="button" aria-expanded="false">Encuestas y Formatos<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li class="dropdown-header">Proyectos</li>
+              <li><a target="_blank" href="../formularios/proyectos.html">Formulario Inscripción proyecto</a></li>
+              <li class="divider"></li>
+              <li class="dropdown-header">Formatos</li>
+              <li><a target="_blank" href="../formularios/formatoSist.html">Formato de Sistematización</a></li>
+              <li class="divider"></li>
+              <li class="dropdown-header">Encuestas</li>
+              <li><a target="_blank" href="../formularios/encUsuarios.html">Encuesta a Usuarios y Beneficiarios</a></li>
+              <li><a target="_blank" href="../formularios/encParticipantes.html">Encuesta a integrantes del equipo de trabajo</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul ng-controller="proofController" class="nav navbar-nav navbar-right">
+          <li><button style="background-color: #006462" class="btn totales" type="button">Proyectos<span class="badge">{{respuestas.proy}}</span></button></li>
+          <li><button style="background-color: #385f98" class="btn totales" type="button">Sistematización <span class="badge">{{respuestas.sist}}</span></button></li>
+          <li><button style="background-color: #22A6A3" class="btn totales" type="button">Integrantes<span class="badge">{{respuestas.part}}</span></button></li>
+          <li><button style="background-color: #BA71AD" class="btn totales" type="button">Usuarios<span class="badge">{{respuestas.usua}}</span></button></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+  <div class="container containerPartials"></div>
+<div class="container">
+    <div class="page-content">
+      <div ng-view="" id="ng-view"></div>
+    </div>
+
+    <hr>
+    <footer>
+      <p>PRIAC | &copy; 2015 </p>
+    </footer>
+</div>
+
+<!-- Libraries -->
+<script src="js/angular.min.js"></script>
+<script src="js/ui-bootstrap-tpls-0.11.2.min.js"></script>
+<script src="js/angular-route.min.js"></script>
+<script src="js/angular-animate.min.js"></script>
+
+
+<!-- AngularJS custom codes -->
+<script src="app/app.js"></script>
+<script src="app/data.js"></script>
+<script src="app/directives.js"></script>
+<script src="app/productsCtrl.js"></script>
+<script src="app/clientesCtrl.js"></script>
+<script src="app/proofController.js"></script>
+<script src="app/initialCtrl.js"></script>
+
+<!-- Some Bootstrap Helper Libraries -->
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/underscore.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="js/ie10-viewport-bug-workaround.js"></script>
+
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/default_layout.css">
+  <link rel="stylesheet" href="css/smoothness/jquery-ui-1.9.2.custom.min.css">
+</body>
+</html>

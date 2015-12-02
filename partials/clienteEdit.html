@@ -1,0 +1,77 @@
+    <button type="button" class="close" ng-click="cancel();">
+        <i class="fa fa-times-circle-o" style="margin:10px;color:blue;"></i>
+    </button>
+    <div class="modal-header">
+        <h3 class="modal-title">{{title}} <b> {{cliente.id}}</b></h3>
+    </div>
+    <div class="modal-body">
+        <form name="cliente_form" class="form-horizontal" role="form" novalidate>
+            <form-element label="Documento" mod="cliente" ng-class="{ 'has-error' : cliente_form.id.$invalid }">
+                <input type="number" class="form-control" name="id" placeholder="Documento" ng-model="cliente.id" ng-disabled="agregar" min="1" max="9223372036854775806" focus required/>
+                <div ng-show="cliente_form.id.$dirty && cliente_form.id.$invalid" class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i>
+                  <small> El documento sólo puede contener dígitos positivos.</small>
+                </div>
+            </form-element>
+            <form-element ng-show="!agregar" label="Tipo de documento" mod="cliente" ng-init="cliente.td='cc'">
+               <input type="radio" ng-model="cliente.td" name="td" value="rc"> Registro civil</label><br>
+               <input type="radio" ng-model="cliente.td" name="td" value="ti"> Tarjeta de identidad</label><br>
+               <input type="radio" ng-model="cliente.td" name="td" checked="checked" value="cc"> Cédula de ciudadanía</label><br>
+               <input type="radio" ng-model="cliente.td" name="td" value="pa"> Pasaporte</label>
+            </form-element>
+            <form-element label="Nombres" mod="cliente" ng-class="{ 'has-error' : cliente_form.nombres.$invalid }">
+                <input type="text" class="form-control" name="nombres" placeholder="NOMBRES" ng-model="cliente.nombres" ng-disabled="agregar" ng-minlength="2" ng-maxlength="40" focus required/>
+                <div ng-show="cliente_form.nombres.$dirty && cliente_form.nombres.$invalid" class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i>
+                  <small>El nombre no debe contener más de 40 carácteres.</small>
+                </div>
+            </form-element>
+            <form-element label="Apellidos" mod="cliente" ng-class="{ 'has-error' : cliente_form.apellidos.$invalid }">
+                <input type="text" class="form-control" name="apellidos" placeholder="APELLIDOS" ng-model="cliente.apellidos" ng-disabled="agregar"  ng-minlength="2" ng-maxlength="40" focus required/>
+                <div ng-show="cliente_form.apellidos.$dirty && cliente_form.apellidos.$invalid" class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i>
+                  <small>Los apellidos no deben contener más de 40 carácteres.</small>
+                </div>
+            </form-element>
+            <form-element label="Teléfono" mod="cliente" ng-class="{ 'has-error' : cliente_form.tel.$invalid }">
+                <input type="text" class="form-control" name="tel" placeholder="TELÉFONO" ng-model="cliente.telefono" ng-minlength="6" ng-maxlength="15" focus/>
+                <div ng-show="cliente_form.tel.$dirty && cliente_form.tel.$invalid" class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i>
+                  <small>Debe tener entre 6 y 15 carácteres.</small>
+                </div>
+            </form-element>
+            <form-element label="Celular" mod="cliente" ng-class="{ 'has-error' : cliente_form.cel.$invalid }">
+                <input type="number" class="form-control" name="cel" placeholder="CELULAR" ng-model="cliente.celular" min="1000000000" max="9999999999999" focus/>
+                <div ng-show="cliente_form.cel.$dirty && cliente_form.cel.$invalid" class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i>
+                  <small>Debe tener entre 10 y 11 dígitos.</small>
+                </div>
+            </form-element>
+            <form-element label="Correo" mod="cliente" ng-class="{ 'has-error' : cliente_form.correo.$invalid }">
+                <input type="email" class="form-control" name="correo" placeholder="E-MAIL" ng-model="cliente.email" ng-minlength="6" ng-maxlength="30" focus required/>
+                <div ng-show="cliente_form.correo.$dirty && cliente_form.correo.$invalid" class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i>
+                  <small>Debe ser un correo válido y entre 6 y 30 carácteres.</small>
+                </div>
+            </form-element>
+            <form-element label="Dirección" mod="cliente" ng-class="{ 'has-error' : cliente_form.direccion.$invalid }">
+                <input type="text" class="form-control" name="direccion" placeholder="DIRECCIÓN" ng-model="cliente.direccion" ng-minlength="2" ng-maxlength="50" focus required/>
+                <div ng-show="cliente_form.direccion.$dirty && cliente_form.direccion.$invalid" class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i>
+                  <small>Debe tener entre 2 y 50 carácteres.</small>
+                </div>
+            </form-element>
+            <form-element label="F.Nacimiento" mod="cliente" ng-class="{ 'has-error' : cliente_form.nac.$invalid }">
+                <input type="date" class="form-control" name="nac" placeholder="FECHA DE NACIMIENTO" ng-disabled="agregar" ng-model="cliente.nacimiento" min="1915-12-12" max="2015-12-12" focus required/>
+            </form-element>
+
+            <div class="space"></div>
+            <div class="space-4"></div>
+            <div class="modal-footer">
+                <form-element label="">
+                    <div class="text-right">
+                        <a class="btn btn-sm" ng-click="cancel()"><i class="ace-icon fa fa-reply"></i>Cancel</a>
+                        <button ng-click="savecliente(cliente);"
+                                ng-disabled="cliente_form.$invalid"
+                                class="btn btn-sm btn-primary"
+                                type="submit">
+                            <i class="ace-icon fa fa-check"></i>{{buttonText}}
+                        </button>
+                    </div>
+                </form-element>
+            </div>
+        </form>
+    </div>
