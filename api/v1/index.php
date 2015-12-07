@@ -67,6 +67,16 @@ $app->get('/respuestas', function() {
     echoResponse(200, $rows);
 });
 
+$app->put('/info', function() use ($app) {
+    $data = json_decode($app->request->getBody());
+    $mandatory = array();
+    global $db;
+    $rows = $db->update("secundaria", $data);
+    if($rows["status"]=="success")
+        $rows["message"] = "Product added successfully.";
+    echoResponse(200, $rows);
+});
+
 function echoResponse($status_code, $response) {
     global $app;
     $app->status($status_code);

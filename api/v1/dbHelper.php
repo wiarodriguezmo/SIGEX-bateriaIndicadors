@@ -68,6 +68,32 @@ class dbHelper {
         }
         return $response;
     }
+
+    function update($table, $columnsArray){
+        try{
+            $a = array();
+            $c = "";
+            foreach ($columnsArray as $key => $value) {
+                $c .= $key. " = :".$key.", ";
+                $a[":".$key] = $value;
+            }
+            $c = rtrim($c,", ");
+            $stmt =  $this->db->prepare("UPDATE ". $table . " SET " .$c);
+            $stmt->execute($a);
+            $affected_rows = $stmt->rowCount();
+            if($affected_rows<=0){
+                $response["status"] = "warning";
+                $response["message"] = "No row updated";
+            }else{
+                $response["status"] = "success";
+                $response["message"] = $affected_rows." row(s) updated in database";
+            }
+        }catch(PDOException $e){
+            $response["status"] = "error";
+            $response["message"] = "Update Failed: " .$e->getMessage() . $columnsArray;
+        }
+        return $response;
+    }
 }
 
 ?>

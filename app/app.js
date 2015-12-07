@@ -5,13 +5,17 @@ app.config(['$routeProvider',
     $routeProvider.
     when('/', {
       title: 'SYSTEM INFORMATION PRIAC',
-      templateUrl: 'partials/inicio.html',
-      controller: 'initialCtrl'
+      templateUrl: 'partials/inicio.html'
     })
     .when('/indicadores', {
       title: 'Bases de datos PJA',
       templateUrl: 'partials/indicadores.html',
       controller: 'initialCtrl'
+    })
+    .when('/inscribirSec', {
+      title: 'Bases de datos PJA',
+      templateUrl: 'partials/inscribirSec.html',
+      controller: 'secCtrl'
     })
     .when('/falta', {
       title: 'Temas faltantes',

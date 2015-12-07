@@ -1,0 +1,62 @@
+<form name="info_form" class="form-horizontal" role="form">
+    <form-element label="Uno" mod="info">
+        <input type="text" class="form-control" name="uno" placeholder="N° de proyectos de extensión con agentes externos a la Universidad en el último año" ng-model="info.uno" focus/>
+    </form-element>
+    <form-element label="Dos" mod="info">
+        <input type="text" class="form-control" name="dos" placeholder="% de proyectos de extensión con sector social en el último año" ng-model="info.dos" focus/>
+    </form-element>
+    <form-element label="Tres" mod="info">
+        <input type="text" class="form-control" name="tres" placeholder="% de proyectos de extensión con sector privado en el último año" ng-model="info.tres" focus/>
+    </form-element>
+    <form-element label="Cuatro" mod="info">
+        <input type="text" class="form-control" name="cuatro" placeholder="% de proyectos de extensión con el Estado en el último año" ng-model="info.cuatro" focus/>
+    </form-element>
+    <form-element label="Diez" mod="info">
+        <input type="text" class="form-control" name="diez" placeholder="Publicaciones por proyecto con ISBN e ICCN aceptados por pares académicos" ng-model="info.diez" focus/>
+    </form-element>
+    <form-element label="Quince" mod="info">
+        <input type="text" class="form-control" name="quince" placeholder="% de estudiantes de pregrado, estudiantes de postgrado, egresados, docentes y pensionados que participaron en los programas de extensión en el año anterior" ng-model="info.quince" focus/>
+    </form-element>
+    <form-element label="Dieciocho" mod="info">
+        <input type="text" class="form-control" name="dieciocho" placeholder="N° de disciplinas involucradas en el desarrollo del total de los convenios o consultorías" ng-model="info.dieciocho" focus/>
+    </form-element>
+    <form-element label="Veintiseis" mod="info">
+        <input type="text" class="form-control" name="veintiseis" placeholder="% de personas que se benefician directamente por los convenios o consultorías realizadas" ng-model="info.veintiseis" focus/>
+    </form-element>
+    <form-element label="Veintiocho" mod="info">
+        <input type="text" class="form-control" name="veintiocho" placeholder="N° de sesiones de seguimiento de la extensión realizadas en el año en la Unidad o facultad" ng-model="info.veintiocho" focus/>
+    </form-element>
+    <form-element label="Veintinueve" mod="info">
+        <input type="text" class="form-control" name="veintinueve" placeholder="% de decisiones tomadas en los comités de seguimiento y en los informes de evaluación que en efecto fueron aplicadas" ng-model="info.veintinueve" focus/>
+    </form-element>
+    <form-element label="Treinta" mod="info">
+        <input type="text" class="form-control" name="treinta" placeholder="N° de documentos de evaluación de la misión de extensión (que cumplen los criterios establecidos) que se producen al año en cada unidad o facultad" ng-model="info.treinta" focus/>
+    </form-element>
+    <form-element label="Treintaycinco" mod="info">
+        <input type="text" class="form-control" name="treintaycinco" placeholder="Monto de recursos brutos que ingresa a la unidad o facultad como producto de las actividades de extensión en el último año" ng-model="info.treintaycinco" focus/>
+    </form-element>
+    <form-element label="Treintayseis" mod="info">
+        <input type="text" class="form-control" name="treintayseis" placeholder="% de recursos transferidos del nivel central para financiar las actividades de extensión" ng-model="info.treintayseis" focus/>
+    </form-element>
+    <form-element label="Treintaysiete" mod="info">
+        <input type="text" class="form-control" name="treintaysiete" placeholder="% de recursos económicos que genera la venta de servicios de extensión (después de gastos operativos de los convenios o consultoría) que son reinvertidos en actividades de investigación, docencia o en recursos y medios académicos de facultades y departamentos orientados hacia sus estudiantes" ng-model="info.treintaysiete" focus/>
+    </form-element>
+    <form-element label="Cuarentaytres" mod="info">
+        <input type="text" class="form-control" name="cuarentaytres" placeholder="% de propuestas ejecutadas con respecto a las presentadas" ng-model="info.cuarentaytres" focus/>
+    </form-element>
+
+    <div class="space"></div>
+    <div class="space-4"></div>
+    <div class="modal-footer">
+        <form-element label="">
+            <div class="text-right">
+                <a class="btn btn-sm" href="#/indicadores"><i class="ace-icon fa fa-reply"></i>Cancel</a>
+                <button ng-click="guardar(info);"
+                        class="btn btn-sm btn-primary"
+                        type="submit">
+                    <i class="ace-icon fa fa-check"></i>Guardar
+                </button>
+            </div>
+        </form-element>
+    </div>
+</form>
