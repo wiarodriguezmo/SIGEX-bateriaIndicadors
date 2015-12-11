@@ -1,6 +1,11 @@
 html{
 
 }
+
+.nd{
+  background-color: white !important;
+  border-color: white !important;
+}
 body{
   font-family: "Open Sans";
 }
